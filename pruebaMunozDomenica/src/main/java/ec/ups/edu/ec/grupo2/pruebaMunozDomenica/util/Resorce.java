@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 
 
 public class Resorce {
-	String dsName="";
+	String dsName="java:/jboss/datasources/prueba";
 	
 @Produces
 private Connection createConnection() throws SQLException, NamingException{
