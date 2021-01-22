@@ -25,4 +25,9 @@ public class ProductoOn {
     	
     }
 
+    public void registrarCliente(Cliente cliente) throws Exception {
+    	daocliente.insert(cliente);
+    	
+    	
+    }
 }

@@ -7,10 +7,11 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
+import ec.ups.edu.ec.grupo2.pruebaMunozDomenica.Modelo.Cliente;
 import ec.ups.edu.ec.grupo2.pruebaMunozDomenica.Modelo.Producto;
 import ec.ups.edu.ec.grupo2.pruebaMunozDomenica.ON.ProductoOn;
 
-
+@Path("Cliente")
 public class ResetService {
 	 @Inject
 	 private ProductoOn pro;
@@ -26,6 +27,12 @@ public class ResetService {
 			}
 	 
 	 
-	 
+	@POST
+	@Produces("application/json")
+	@Consumes("aplicacion/json")
+	@Path("producto")
+	public void registart(Cliente cliente)throws Exception{
+		pro.registrarCliente(cliente);
+	}
 
 }
